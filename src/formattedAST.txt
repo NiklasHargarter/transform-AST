@@ -1,0 +1,20 @@
+Right (CompilationUnit Nothing [] [ClassTypeDecl (ClassDecl (Location {loc_file = "/home/niklas/github/transform-AST/src/java/ExampleA.java", loc_line = 1, loc_column = 1},Location {loc_file = "", loc_line = 17, loc_column = 2}) [public] (Ident "ExampleA") [] Nothing [] 
+(ClassBody 
+[
+    MemberDecl (FieldDecl (Location {loc_file = "", loc_line = 2, loc_column = 5},Location {loc_file = "", loc_line = 2, loc_column = 21}) [] (RefType (ClassRefType (ClassType [(Ident "ExampleB",[])]))) [VarDecl (VarId (Ident "fieldB")) Nothing]),
+    MemberDecl (ConstructorDecl (Location {loc_file = "", loc_line = 4, loc_column = 5},Location {loc_file = "", loc_line = 6, loc_column = 6}) [public] [] (Ident "ExampleA") [] [] 
+        (ConstructorBody Nothing [BlockStmt (Location {loc_file = "", loc_line = 5, loc_column = 9},Location {loc_file = "", loc_line = 5, loc_column = 31}) (ExpStmt (Location {loc_file = "", loc_line = 5, loc_column = 9},Location {loc_file = "", loc_line = 5, loc_column = 31}) 
+            (MethodInv (MethodCall (Name [Ident "callFunctions"]) [ExpName (Name [Ident "fieldB"])])))])),
+    MemberDecl (MethodDecl (Location {loc_file = "", loc_line = 8, loc_column = 5},Location {loc_file = "", loc_line = 16, loc_column = 6}) [public] [] Nothing (Ident "callFunctions") [FormalParam [] (RefType (ClassRefType (ClassType [(Ident "ExampleB",[])]))) False (VarId (Ident "formalParameterB"))] [] Nothing 
+    (MethodBody (Just 
+        (Block 
+        [LocalVars (Location {loc_file = "", loc_line = 9, loc_column = 9},Location {loc_file = "", loc_line = 9, loc_column = 42}) [] (RefType (ClassRefType (ClassType [(Ident "ExampleB",[])]))) [VarDecl (VarId (Ident "localB")) (Just (InitExp (InstanceCreation [] (TypeDeclSpecifier (ClassType [(Ident "ExampleB",[])])) [] Nothing)))],
+        BlockStmt (Location {loc_file = "", loc_line = 10, loc_column = 9},Location {loc_file = "", loc_line = 10, loc_column = 34}) 
+            (ExpStmt (Location {loc_file = "", loc_line = 10, loc_column = 9},Location {loc_file = "", loc_line = 10, loc_column = 34}) 
+                (MethodInv (MethodCall (Name [Ident "localB",Ident "calledWithLocal"]) []))),
+        BlockStmt (Location {loc_file = "", loc_line = 12, loc_column = 9},Location {loc_file = "", loc_line = 12, loc_column = 54}) 
+            (ExpStmt (Location {loc_file = "", loc_line = 12, loc_column = 9},Location {loc_file = "", loc_line = 12, loc_column = 54}) 
+                (MethodInv (MethodCall (Name [Ident "formalParameterB",Ident "calledWithFormalParameter"]) []))),BlockStmt (Location {loc_file = "", loc_line = 14, loc_column = 9},Location {loc_file = "", loc_line = 14, loc_column = 40}) (ExpStmt (Location {loc_file = "", loc_line = 14, loc_column = 9},Location {loc_file = "", loc_line = 14, loc_column = 40}) 
+        (MethodInv (PrimaryMethodCall (FieldAccess (PrimaryFieldAccess This (Ident "fieldB"))) [] (Ident "calledWithField1") []))),BlockStmt (Location {loc_file = "", loc_line = 15, loc_column = 9},Location {loc_file = "", loc_line = 15, loc_column = 35}) (ExpStmt (Location {loc_file = "", loc_line = 15, loc_column = 9},Location {loc_file = "", loc_line = 15, loc_column = 35}) 
+        (MethodInv (MethodCall (Name [Ident "fieldB",Ident "calledWithField2"]) [])))]))))
+    ]))])
